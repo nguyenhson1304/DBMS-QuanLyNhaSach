@@ -1,0 +1,2 @@
+CREATE VIEW vw_DanhSachCSVC AS
+SELECT * FROM CoSoVatChat;

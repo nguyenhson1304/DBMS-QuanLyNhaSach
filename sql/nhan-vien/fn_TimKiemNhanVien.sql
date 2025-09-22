@@ -1,0 +1,5 @@
+CREATE FUNCTION fn_TimKiemNhanVien(@Ten NVARCHAR(100))
+RETURNS TABLE
+AS
+RETURN
+    SELECT * FROM NhanVien WHERE HoTen LIKE '%' + @Ten + '%';

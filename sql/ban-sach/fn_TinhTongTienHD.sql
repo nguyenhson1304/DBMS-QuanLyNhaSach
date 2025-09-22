@@ -1,0 +1,10 @@
+CREATE FUNCTION fn_TinhTongTienHD (@MaHD NVARCHAR(20))
+RETURNS DECIMAL(18,2)
+AS
+BEGIN
+    DECLARE @Tong DECIMAL(18,2);
+    SELECT @Tong = SUM(SoLuongBan * DonGiaBan)
+    FROM ChiTietBan
+    WHERE MaHD = @MaHD;
+    RETURN @Tong;
+END
